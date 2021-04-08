@@ -1,6 +1,6 @@
 import './App.css';
 import Navbar from "./components/Header";
-import Footer from "./components/Footer";
+import Dashboard from "./components/User/Dashboard/Dashboard";
 import Register from "./components/Register"
 import Home from "./components/Home"
 import Login from "./components/Login";
@@ -10,13 +10,14 @@ import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 function App() {
   return (
     <BrowserRouter>
-      <Navbar transparent/>
+      <Navbar/>
       <ToastContainer />
 
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />
+        <Route path="/dashboard" component={Dashboard} />
       </Switch>
       {/* <Footer  /> */}
     </BrowserRouter>
