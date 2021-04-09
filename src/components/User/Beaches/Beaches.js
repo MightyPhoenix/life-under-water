@@ -15,7 +15,7 @@ const Beaches = () => {
     const [communities, setCommunities] = useState([]);
     const [beaches, setBeaches] = useState([]);
 
-    const {lat, long, error} = coords;
+    const {lat, long} = coords;
 
     useEffect(() => {
         getLocation();
@@ -79,7 +79,7 @@ const Beaches = () => {
           }
           {communities &&
               communities.map((community, key) => (
-                  <Marker key={key} position={{lat: 22.616546, lng: 88.509146}} onClick={() => setSelectedCommunity(community)} 
+                  <Marker key={key} position={{lat: community.lat, lng: community.long}} onClick={() => setSelectedCommunity(community)} 
                     icon={{
                         url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1VfpUMXGPvrEfGM4xFvmekLLurbQBG_yvlA&usqp=CAU",
                         scaledSize: new window.google.maps.Size(50, 50)
@@ -94,7 +94,7 @@ const Beaches = () => {
                     <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-amber-600 bg-amber-200 uppercase last:mr-0 mr-1 mb-3">
                         Beach
                     </span>
-                    <img src={selectedBeach.image} className="mb-3" style={{width: "100%", height: "100%"}} />
+                    <img src={selectedBeach.image} className="mb-3" style={{width: "100%", height: "100%"}} alt="..." />
                     <p className="uppercase font-bold mb-3">{selectedBeach.name}</p>
                     <p className="text-gray-600 mb-3">{selectedBeach.address}</p>
                     <p className="font-bold mb-3">Pollution Level : {selectedBeach.pollution}</p>
@@ -104,12 +104,12 @@ const Beaches = () => {
           } 
           {
               selectedCommunity &&
-              (<InfoWindow position={{lat: 22.616546, lng: 88.509146}} onCloseClick={() => setSelectedCommunity(null)}>
+              (<InfoWindow position={{lat: selectedCommunity.lat, lng: selectedCommunity.long}} onCloseClick={() => setSelectedCommunity(null)}>
                   <div className="container rounded bg-white shadow max-w-sm mx-auto m-4 max-h-sm overflow-auto">
                     <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-black-600 bg-blue-200 uppercase last:mr-0 mr-1 mb-3">
                         Community
                     </span>
-                    <img src={selectedCommunity.image} className="mb-3" style={{width: "100%", height: "100%"}} />
+                    <img src={selectedCommunity.image} className="mb-3" style={{width: "100%", height: "100%"}} alt="..." />
                     <p className="uppercase font-bold mb-3">{selectedCommunity.name}</p>
                     <p className="text-gray-600 mb-3">{selectedCommunity.address}</p>
                     <p className="font-bold mb-3">Beach Covering : {selectedCommunity.beach}</p>

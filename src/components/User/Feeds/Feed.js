@@ -1,4 +1,3 @@
-import { waitFor } from "@testing-library/dom";
 import React, { useState, useEffect } from "react";
 import fire from "../../../config/Fire";
 import FeedItem from "./FeedItem";

@@ -1,4 +1,3 @@
-import React, {useState, useEffect} from "react";
 import {
     NavLink,
     Switch,
@@ -23,7 +22,7 @@ const Dashboard = () => {
         <div className="flex flex-row">
             <div className="px-5 py-5 mr-6">   
             <div className="flex flex-col mb-12 ">             
-                <div className="mb-3 uppercase">Actions</div>
+                <div className="mb-3 uppercase font-bold">Actions</div>
                 
                 <div className="flex flex-row items-center mt-2">
                     <div className="">
@@ -51,8 +50,13 @@ const Dashboard = () => {
                 </div>
             </div>
             <div className="flex flex-col mb-12"> 
-                <div className="mb-3 uppercase">
+                <div className="mb-3 uppercase font-bold">
                     Communities 
+                </div>
+                <div className="flex flex-row items-center mt-2">
+                    <span class="text-xs font-semibold inline-block py-2 px-3 uppercase rounded-full text-black-600 bg-blue-200 uppercase last:mr-0 mr-1 mb-3">
+                        Beach Protector
+                    </span>
                 </div>
             </div>
                 {/* Change the below code to render contains from database */}
@@ -69,7 +73,7 @@ const Dashboard = () => {
                 
                 </div>
             
-            <div className="flex flex-col bg-gray-200 w-full shadow-inner px-5 py-5 ml-5">
+            <div className="flex flex-col bg-gray-200 w-full shadow-inner px-5 py-5 ml-5 overflow-auto">
                 
                 <Switch>
                     <Route path={`${path}/feed`} component={Feed} />

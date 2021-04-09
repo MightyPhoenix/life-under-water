@@ -18,6 +18,7 @@ function App() {
         <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />
         <Route path="/dashboard" component={Dashboard} />
+        <Redirect to="/" />
       </Switch>
       {/* <Footer  /> */}
     </BrowserRouter>
