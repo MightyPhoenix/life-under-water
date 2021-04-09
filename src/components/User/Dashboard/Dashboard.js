@@ -12,7 +12,7 @@ import {FaHistory, FaUmbrellaBeach} from "react-icons/fa";
 import {ImStatsDots} from "react-icons/im";
 
 import Feed from "../Feeds/Feed";
-import Beaches from "../Beaches";
+import Beaches from "../Beaches/Beaches";
 import History from "../History";
 import GlobalLeaderboard from "../GlobalLeaderboard";
 
