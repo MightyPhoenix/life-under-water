@@ -135,7 +135,7 @@ const Beaches = () => {
                     isMarkerShown={true}
                     googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyDMNy3MiJct_jGbjT1svGZGy7rN8wcSC8A"
                     loadingElement={<div style={{ height: `100%` }} />}
-                    containerElement={<div style={{ height: `100vh` }} />}
+                    containerElement={<div style={{ height: `85vh` }} />}
                     mapElement={<div style={{ height: `100%` }} />} 
                 />
             </div>
