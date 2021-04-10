@@ -23,7 +23,8 @@ export const Modal = ({
           id="modal"
           className={`${
             isOpen ? `opacity-0 -translate-y-full scale-150` : ``
-          } transform relative w-10/12 md:w-1/2 h-1/2 md:h-3/4 bg-white rounded shadow-lg transition-opacity transition-transform duration-300`}
+            } transform relative md:w-1/2 h-1/2 md:h-3/4 bg-white rounded shadow-lg transition-opacity transition-transform duration-300`}
+          style={{width:"40%"}}
         >
           {/* header */}
           <div className="px-4 py-3 border-b border-gray-200">
